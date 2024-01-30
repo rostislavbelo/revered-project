@@ -1,0 +1,95 @@
+.header {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  padding: 34px 48px 17px;
+
+  @include vp-1439 {
+    padding: 34px 40px 17px;
+  }
+
+  @include vp-1023 {
+    padding: 30px 16px 17px;
+  }
+
+  @include vp-767 {
+    flex-wrap: wrap;
+    padding: 30px 12px 17px;
+  }
+
+  &__buttons {
+    margin-left: auto;
+    padding-right: 7px;
+    max-width: 30%;
+
+    @include vp-1439 {
+      padding-right: 0;
+      margin-right: -10px;
+    }
+
+    @include vp-767 {
+      order: -1;
+      max-width: 60%;
+    }
+  }
+
+  &__logo-block {
+    padding-top: 12px;
+    transition: opacity $trans-default;
+
+    @include vp-767 {
+      order: -2;
+    }
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+
+    svg {
+      width: 82px;
+      height: 16px;
+    }
+  }
+
+  &__btn-sign-up {
+    border-radius: 7px;
+    border: 1px solid #d66567;
+    background-color: #bc4749;
+    padding: 11px 34.5px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 12.1px;
+    font-weight: 500;
+    line-height: 15.5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: opacity $trans-default;
+
+    @include vp-767 {
+      padding: 11px 17px;
+    }
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
+
+  &__btn-login {
+    border-radius: 7px;
+    border: none;
+    background-color: $color-transparent;
+    padding: 11px 12px;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 12.1px;
+    font-weight: 500;
+    line-height: 15.5px;
+    margin-bottom: 10px;
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+-
+  const headerLinks = [
+    {
+      href: "#",
+      text: "About Us"
+    },
+    {
+      href: "#",
+      text: "Features"
+    },
+    {
+      href: "pricing.html",
+      text: "Pricing"
+    },
+    {
+      href: "#",
+      text: "Product"
+    },
+    {
+      href: "#",
+      text: "Contact",
+    },
+  ]
+
+mixin main-nav(data)
+  nav.main-nav
+    ul.main-nav__list
+      each link in data
+        li.main-nav__item(class = currentUrl === link.href ? "is-active" : "")
+          a(href=link.href)=link.text

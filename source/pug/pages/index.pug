@@ -1,0 +1,80 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Test task"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = false
+  - const hasLoader = false
+  - const footerMods = ""
+  - const currentUrl = "pricing.html"
+
+block main
+  main
+    section.pricing
+      h1.pricing__title Instantly Connect with Your Leads
+      ul.cards
+        li.cards__item
+          .cards__top
+            h2 Basic Survival
+            .cards__prise
+              button.cards__price-currency $
+              span.cards__price-value 30
+              button.cards__price-time /Months
+            span.cards__offer Get Torque’s basic plan to optimise you lead generation process.
+          .cards__detal
+            h3 Core Features
+            p Basic
+            ul.cards__features-list
+              li.bold Email addresses
+              li Phone numbers
+              li Unlimited Lists
+            button.cards__btn Start Free Trial
+        li.cards__item.cards__item--main
+          .cards__top
+            h2 Mission Professional
+            .cards__prise
+              button.cards__price-currency $
+              span.cards__price-value 276
+              button.cards__price-time /Months
+            span.cards__offer Get Torque’s basic plan to optimise you lead generation process.
+          .cards__detal
+            h3 Core Features
+            p Boost Tools
+            ul.cards__features-list
+              li Email addresses
+              li Phone numbers
+              li Unlimited Lists
+              li.bold Export contacts
+              li.bold Prospecting
+              li.bold 50MB Per File Attachment
+            button.cards__btn Get Started
+              +icon("arrow-btn", 17, 17)
+        li.cards__item
+          .cards__top
+            h2 Rocketship Premium
+            .cards__prise
+              button.cards__price-currency $
+              span.cards__price-value 420
+              button.cards__price-time /Months
+            span.cards__offer Get Torque’s basic plan to optimise you lead generation process.
+          .cards__detal
+            h3 Core Features
+            p Super Fuel
+            ul.cards__features-list
+              li Email addresses
+              li Phone numbers
+              li Unlimited Lists
+              li Export contacts
+              li Prospecting
+              li.bold 50MB Per File Attachment
+              li.bold Basic analytics
+            button.cards__btn Start Free Trial
+
+
+
+
+
+
+

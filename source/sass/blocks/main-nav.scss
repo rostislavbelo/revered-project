@@ -1,0 +1,55 @@
+.main-nav {
+  margin-left: 75px;
+  max-width: 70%;
+
+  @include vp-1279 {
+    margin-left: 5%;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
+    max-width: unset;
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include vp-767 {
+      margin-left: -8px;
+    }
+  }
+
+  &__item {
+    margin-right: 25px;
+
+    @include vp-1023 {
+      margin-right: 8px;
+    }
+  }
+
+  &__item a {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12.1px;
+    font-weight: 400;
+    line-height: 15.5px;
+    padding: 13px 12px 12px;
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
+
+  &__item.is-active a {
+    color: #ffffff;
+    font-weight: 600;
+    pointer-events: none;
+  }
+}

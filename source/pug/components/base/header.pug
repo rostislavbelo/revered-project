@@ -1,0 +1,20 @@
+mixin header(headerMods, currentUrl)
+  header.header
+    .header__logo-block
+      if(currentUrl === "index.html")
+        span.header__logo
+          +icon("logo", 82, 16)
+      else
+        a.header__logo(href="index.html" aria-label="Переход на главную")
+          +icon("logo", 82, 16)
+    +main-nav(headerLinks)
+
+    .header__buttons
+      button.header__btn-login Login
+      button.header__btn-sign-up Sign Up
+
+
+
+
+
+

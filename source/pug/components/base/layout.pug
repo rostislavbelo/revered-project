@@ -1,0 +1,40 @@
+doctype html
+
+include ../components
+
+block variables
+
+html(lang="ru")
+  head
+    title= title
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="description", content="Тестовое задание")
+    link(rel="apple-touch-icon", sizes="180x180", href="favicon/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="favicon/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="favicon/favicon-16x16.png")
+    link(rel="manifest", href="favicon/site.webmanifest", crossorigin="use-credentials")
+    meta(name="msapplication-TileColor", content="#da532c")
+    meta(name="theme-color", content="#ffffff")
+    link(rel="preload", href="fonts/inter-v13-latin-regular.woff2", as="font", crossorigin="anonymous")
+    link(rel="preload", href="fonts/inter-v13-latin-600.woff2", as="font", crossorigin="anonymous")
+    link(rel="stylesheet", href="css/style.min.css")
+
+  body
+    +sprite()
+    .wrapper(class=wrapperMods)
+      .container
+        if (hasHeader)
+          +header(headerMods, currentUrl)
+
+        block main
+
+        if (hasFooter)
+          +footer(footerMods)
+
+
+    script(src="js/main.min.js")
+
+
+
